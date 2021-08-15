@@ -10,6 +10,7 @@ const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rho
 const _=require('lodash');
 const app = express();
 let posts=[];
+const port = process.env.PORT || 4000;
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -58,6 +59,6 @@ app.post("/compose",(req,resp)=>{
   resp.redirect("/");
 
 })
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+app.listen(port, () => {
+  console.log("Started at 4000");
 });
