@@ -43,7 +43,7 @@ app.get("/posts/:topic",(req,resp)=>{
 
    let topic=  posts.filter((e)=>{
       return _.lowerCase(e.title)===_.lowerCase(req.params.topic);
-    });console.log(topic);
+    });
     resp.render("post",{
       topic:topic[0],
     })

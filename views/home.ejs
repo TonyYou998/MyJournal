@@ -2,7 +2,7 @@
 <h1>Home</h1>
 <p><%=homeStartingContent%></p>
   <%  posts.forEach((e)=>{ %>
-        <h2><%=e.title%></h2>
+        <h2><%=e.title.toUpperCase()%></h2>
         <p><%=e.post.substring(0,100)+"..."%><a href="/posts/<%=e.title%>">Read more</a></p> 
         
 
